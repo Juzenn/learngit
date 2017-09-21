@@ -1,0 +1,25 @@
+# Method1
+freq = {}
+
+for word in words:
+	if word not in freq:
+		freq[word] = 1
+	else:
+		freq[word] += 1
+		
+sorted(freq.items(),key = lambda x:x[1],reverse = True)
+		
+		
+# Method2
+import collections
+
+freq = collections.defaultdict(int)
+
+for word in words:
+	freq[word] += 1
+	
+	
+# Method3
+
+from collections import Counter
+freq = Counter(words)
